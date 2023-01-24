@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+:root {
+  --color1: rgb(53, 59, 44);
+  --color2: rgb(246, 240, 227);
+  --color3: rgb(98, 126, 59);
+  --color4: rgb(73, 72, 47);
+  --color5: rgb(174, 194, 145);
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr 100px;
+  width: 100vw;
+  height: 100vh;
+  padding: 5px;
+  background-color: var(--color3);
+}
+
+#main {
+  background-color: var(--color1);
+  border-radius: 5px;
+}
+
+#controlPanel {
+  background-color: var(--color3);
+}
+
+img {
+  width: 300px;
+  height: auto;
+}
