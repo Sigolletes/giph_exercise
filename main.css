@@ -1,0 +1,103 @@
+@import url(https://fonts.googleapis.com/css2?family=Quicksand&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+:root {
+  --color1: rgb(53, 59, 44);
+  --color2: rgb(246, 240, 227);
+  --color3: rgb(98, 126, 59);
+  --color4: rgb(73, 72, 47);
+  --color5: rgb(174, 194, 145);
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr 100px;
+  width: 100vw;
+  height: 100vh;
+  padding: 2vmin;
+  background-color: var(--color3);
+}
+
+#main {
+  background-color: var(--color1);
+  border-radius: 10px;
+  padding: 3vmin;
+}
+
+h1 {
+  color: var(--color5);
+  font-size: clamp(20px , 4vw, 60px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 32vmin;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: var(--color5) 0px 0px 25px;
+}
+
+.bigImg {
+  width: 40vmin;
+}
+
+img:hover {
+  transform: scale(1.3);
+}
+
+#controlPanel {
+  background-color: var(--color3);
+  display: flex;
+  gap: 3vw;
+  align-items: center;
+  justify-content: center;
+}
+
+#search {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: var(--color4) 0px 0px 5px;
+  font-size: clamp(15px , 2.2vw, 30px);
+  text-align: center;
+  outline: none;
+  color: var(--color4);
+  background-color: var(--color2);
+}
+
+#search:hover, button:hover {
+  transform: scale(1.1);
+}
+
+#search:active, #search:focus {
+  box-shadow: 0 0 25px var(--color2);
+}
+
+button {
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: clamp(13px , 1.8vw, 25px);
+  background-color: var(--color5);
+  box-shadow: var(--color4) 0px 0px 5px;
+}
+
