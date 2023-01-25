@@ -28,10 +28,19 @@ body {
   background-color: var(--color1);
   border-radius: 10px;
   padding: 3vmin;
+}
+
+.grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   justify-items: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -55,8 +64,10 @@ img {
   border: none;
   box-shadow: var(--color4) 0px 0px 5px;
   font-size: clamp(15px , 2.2vw, 30px);
+  text-align: center;
   outline: none;
   color: var(--color4);
+  background-color: var(--color2);
 }
 
 #search:hover {
@@ -66,4 +77,3 @@ img {
 #search:active, #search:focus {
   box-shadow: 0 0 25px var(--color2);
 }
-
