@@ -1,28 +1,25 @@
 const giphGenerator = (function() {
   const $main = document.querySelector("#main");
 
-  const baseURL = 'https://api.giphy.com/v1/gifs/';
   const api_key = 'GEuWWpT4pvXl1MSecs0yVBsmefvFfWdl';
 
-  async function randomRequest() {
-    const randomURL = `${baseURL}random?api_key=${api_key}`
-    const response = await fetch(randomURL, {mode: 'cors'});
-    const randomData = await response.json();
-    console.log(randomData.data.images.original.url);
-    return randomData.data.images.original.url;
-  }
+  async function trending() {
+    const giphURL = `https://api.giphy.com/v1/gifs/trending?api_key=${api_key}`;
+    const response = await fetch(giphURL, {mode: 'cors'});
+    const giphData = await response.json();
+    console.log(giphData);
 
-  const random = () => {
-    for (let i = 1; i <= 2; i++) {
-      let $img = document.createElement("img");
-/*       $img.src = randomRequest().then(); */
-      console.log($img.src, randomRequest());
+    for (let i = 0; i < 4; i++) {
+      let $img = document.createElement('img');
       $main.appendChild($img);
+      $img.src = giphData.data[i].images.original.url;
     }
   }
 
+  
+
   return {
-    random
+    trending
   }
 })();
 
